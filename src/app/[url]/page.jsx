@@ -1,5 +1,6 @@
 import dbConnect from "@/lib/db";
 import ShortUrl from "@/models/ShortUrl";
+import "@/models/OriginalUrl";
 import { redirect } from "next/navigation";
 
 async function getOriginalUrl(url) {
