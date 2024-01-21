@@ -25,7 +25,9 @@ export async function POST(req) {
     return new NextResponse("Invalid data", { status: 400 });
   }
   try {
+    console.time("connectDb");
     await dbConnect();
+    console.timeEnd("connectDb");
     const originalUrl = await OriginalUrl.create({
       originalUrl: url,
       expiresAt: new Date(Date.now()),

@@ -16,7 +16,7 @@ export default function Home() {
       }, 1500);
       return;
     }
-    fetch(`${baseUrl}/api/db-connect`, {
+    fetch(`${baseUrl}/url/db-connect`, {
       method: "POST",
       body: JSON.stringify({ url: urlValue }),
       headers: {
