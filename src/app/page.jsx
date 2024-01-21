@@ -44,7 +44,7 @@ export default function Home() {
             Invalid URL
           </p>
         </div>
-        <div className="flex gap-x-3 min-w-[45vw]">
+        <div className="flex flex-col lg:flex-row gap-y-4  gap-x-3 min-w-[45vw]">
           <input
             type="text"
             id="url"
@@ -63,7 +63,7 @@ export default function Home() {
         </div>
       </section>
       {shortUrl && (
-        <section className="pt-24 flex gap-x-3 items-center">
+        <section className="pt-24 flex flex-col lg:flex-row gap-y-4 gap-x-3 items-center">
           <div className="font-semibold text-3xl tracking-wider underline text-white decoration-indigo-500">
             Your Shortened Url
           </div>
