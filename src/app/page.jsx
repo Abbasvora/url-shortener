@@ -7,7 +7,6 @@ export default function Home() {
   const popup = useRef();
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
   const handleSubmit = () => {
-    setLoading(true);
     if (!URL.canParse(urlValue)) {
       popup.current.classList.remove("hidden");
       popup.current.classList.add("flex");
@@ -18,6 +17,7 @@ export default function Home() {
       }, 1500);
       return;
     }
+    setLoading(true);
     fetch(`${baseUrl}/api/db-connect`, {
       method: "POST",
       body: JSON.stringify({ url: urlValue }),
